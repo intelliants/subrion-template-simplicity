@@ -59,7 +59,7 @@
             type="radio"
             order="3202"
             values="1,0"
-            description="Enable Logo text">0</config>
+            description="Enable Logo text">1</config>
     <config group="template_simplicity"
             name="logo_text"
             type="text"

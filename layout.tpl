@@ -42,15 +42,27 @@
 
     <body class="page-{$core.page.name}">
 
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <nav class="navbar navbar-expand-md navbar-light bg-light {if $core.config.navbar_sticky}fixed-top{/if}">
             <div class="container">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="{$smarty.const.IA_URL}">
+                    {if $core.config.enable_text_logo}
+                        {$core.config.logo_text}
+                    {else}
+                        {if !empty($core.config.site_logo)}
+                            <img src="{$core.page.nonProtocolUrl}uploads/{$core.config.site_logo}" width="auto" height="40" alt="{$core.config.site|escape}">
+                        {else}
+                            <img src="{$img}logo.png" width="auto" height="40" alt="{$core.config.site|escape}">
+                        {/if}
+                    {/if}
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                    <ul class="navbar-nav mr-auto">
+                    {ia_blocks block='mainmenu'}
+
+                    {*<ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                         </li>
@@ -68,10 +80,16 @@
                                 <a class="dropdown-item" href="#">Something else here</a>
                             </div>
                         </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </ul>*}
+                    <form method="get" action="{$smarty.const.IA_URL}search/" class="form-inline my-2 my-lg-0">
+                        <div class="input-group">
+                            <input class="form-control" type="text" name="q" placeholder="{lang key='search'}">
+                            <div class="input-group-append">
+                                <button class="btn btn-success my-2 my-sm-0" type="submit">
+                                    <span class="fas fa-search"></span>
+                                </button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -81,15 +99,64 @@
             {ia_blocks block='teaser'}
         </header>
 
-        <main class="main">
-            {if $core.config.enable_landing && 'index' == $core.page.name}
-                <div class="landing">
-                    {ia_blocks block='landing'}
+        {ia_hooker name='smartyFrontBeforeBreadcrumb'}
+
+        {include 'breadcrumb.tpl'}
+
+        {if $core.config.enable_landing && 'index' == $core.page.name}
+            <main class="landing">
+                {ia_blocks block='landing'}
+            </main>
+        {else}
+            <main class="content">
+                <div class="container">
+                    <div class="row">
+                        <div class="{width section='content' position='left' tag='col-md-'} aside">
+                            {ia_blocks block='left'}
+                        </div>
+                        <div class="{width section='content' position='center' tag='col-md-'}">
+                            <div class="content__wrap">
+
+                                {ia_blocks block='top'}
+
+                                <div class="content__header">
+                                    <h1>{$core.page.title|escape}</h1>
+                                    <ul class="content__actions">
+                                        {foreach $core.actions as $name => $action}
+                                            <li>
+                                                {if 'action-favorites' == $name}
+                                                    {printFavorites item=$item itemtype=$item.item guests=true}
+                                                {else}
+                                                    <a data-toggle="tooltip" title="{$action.title}" {foreach $action.attributes as $key => $value}{$key}="{$value}" {/foreach}>
+                                                    <span class="fa fa-{$name}"></span>
+                                                    </a>
+                                                {/if}
+                                            </li>
+                                        {/foreach}
+                                    </ul>
+                                </div>
+
+                                {ia_hooker name='smartyFrontBeforeNotifications'}
+                                {include 'notification.tpl'}
+
+                                {ia_hooker name='smartyFrontBeforeMainContent'}
+
+                                <div class="content__body">
+                                    {$_content_}
+                                </div>
+
+                                {ia_hooker name='smartyFrontAfterMainContent'}
+
+                                {ia_blocks block='bottom'}
+                            </div>
+                        </div>
+                        <div class="{width section='content' position='right' tag='col-md-'} aside">
+                            {ia_blocks block='right'}
+                        </div>
+                    </div>
                 </div>
-            {else}
-                {$_content_}
-            {/if}
-        </main>
+            </main>
+        {/if}
 
         <footer class="footer">
             <div class="container">
