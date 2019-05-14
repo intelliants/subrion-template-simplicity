@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Subrion Simplicity Front-end template",
   "scripts": {
+    "dev": "gulp sass",
+    "watch": "gulp dev",
+    "prod": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Intelliants",
