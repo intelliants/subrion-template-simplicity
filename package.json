@@ -3,24 +3,29 @@
   "version": "1.0.0",
   "description": "Subrion Simplicity Front-end template",
   "scripts": {
-    "dev": "gulp sass",
-    "watch": "gulp dev",
-    "prod": "gulp build",
+    "dev": "webpack",
+    "watch": "webpack --watch",
+    "prod": "cross-env NODE_ENV=production webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Intelliants",
   "license": "GPL",
   "devDependencies": {
-    "browser-sync": "^2.18.6",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-clean-css": "^2.0.11",
-    "gulp-concat": "^2.6.0",
-    "gulp-imagemin": "^3.0.1",
-    "gulp-notify": "^3.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.3.1",
-    "gulp-util": "^3.0.7",
-    "node-sass": "^4.12.0"
+    "autoprefixer": "^9.8.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.5.3",
+    "extract-loader": "^5.1.0",
+    "file-loader": "^6.0.0",
+    "node-sass": "^4.14.1",
+    "postcss-cli": "^7.1.1",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
   }
 }
