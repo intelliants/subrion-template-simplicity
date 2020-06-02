@@ -1,5 +1,5 @@
 {if 'mainmenu' == $position}
-    {ia_menu menus=$menu.contents class="navbar-nav mr-auto {$menu.classname}"}
+    {ia_menu menus=$menu.contents class="nav navbar-nav navbar-right nav-main {$menu.classname}"}
 {elseif 'inventory' == $position}
     {ia_menu menus=$menu.contents class="nav-inventory hidden-sm hidden-xs pull-right {$menu.classname}"}
 {elseif 'account' == $position}
