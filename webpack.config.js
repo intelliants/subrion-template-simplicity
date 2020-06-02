@@ -5,7 +5,7 @@ module.exports = {
   entry: ['./src/js/app.js', './src/scss/app.scss'],
   output: {
     path: path.resolve(__dirname, './'),
-    filename: 'js/dist/app.min.js',
+    filename: 'js/app.js',
   },
   module: {
     rules: [
@@ -15,7 +15,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: './css/dist/[name].min.css',
+              name: './css/[name].css',
             }
           },
           {loader: 'extract-loader'},
