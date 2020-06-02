@@ -32,17 +32,27 @@
     </head>
 
     <body class="page-{$core.page.name}">
-        <div class="inventory">
+        <section class="inventory">
             <div class="container">
-                <nav>
-                    <ul class="list-inline">
-                        <li class="list-inline-item">
-                            <a href="#">Link 1</a>
-                        </li>
+                {if $core.config.website_social}
+                    <ul class="nav-inventory nav-inventory-social float-left">
+                        {if $core.config.website_social_t}<li><a href="{$core.config.website_social_t}" class="twitter"><span class="fab fa-twitter"></span></a></li>{/if}
+                        {if $core.config.website_social_f}<li><a href="{$core.config.website_social_f}" class="facebook"><span class="fab fa-facebook"></span></a></li>{/if}
+                        {if $core.config.website_social_g}<li><a href="{$core.config.website_social_g}" class="google-plus"><span class="fab fa-google-plus"></span></a></li>{/if}
+                        {if $core.config.website_social_i}<li><a href="{$core.config.website_social_i}" class="linkedin"><span class="fab fa-linkedin"></span></a></li>{/if}
                     </ul>
-                </nav>
+                {/if}
+                {if !$core.config.search_inventory}
+                    <form method="get" action="{$smarty.const.IA_URL}search/" class="search-inventory float-right">
+                        <input type="text" name="q" placeholder="{lang key='search' readonly=true}">
+                        <button type="submit"><span class="fa fa-search"></span></button>
+                    </form>
+                {/if}
+                {include 'language-selector.tpl'}
+                {include 'currency-selector.tpl'}
+                {ia_blocks block='inventory'}
             </div>
-        </div>
+        </section>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" href="#">

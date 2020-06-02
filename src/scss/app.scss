@@ -5,12 +5,14 @@
 
 // Vendors
 @import 'vendors/bootstrap';
+@import 'vendors/fontawesome';
 
 // Base
 @import 'base/reset';
 @import 'base/typography';
 
 // Layout
+@import 'layout/inventory';
 @import 'layout/header';
 @import 'layout/sidebar';
 
