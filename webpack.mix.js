@@ -5,14 +5,13 @@ mix.config.resourceRoot = '/templates/simplicity/';
 mix.config.fileLoaderDirs.images = 'img';
 
 mix.js('src/js/app.js', 'js')
-   .sass('src/scss/app.scss', 'css');
-
-mix.webpackConfig({
-  plugins: [
-    new WebpackNotifierPlugin({
-      title: 'Simplicity',
-      alwaysNotify: true,
-      contentImage: 'img/logo.png',
-    }),
-  ],
-});
+   .sass('src/scss/app.scss', 'css')
+   .webpackConfig({
+      plugins: [
+        new WebpackNotifierPlugin({
+          title: 'Simplicity',
+          alwaysNotify: true,
+          contentImage: 'img/logo.png',
+        }),
+      ],
+   });

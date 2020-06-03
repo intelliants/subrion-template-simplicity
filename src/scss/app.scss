@@ -12,9 +12,11 @@
 @import 'base/typography';
 
 // Layout
+@import 'layout/wrapper';
 @import 'layout/inventory';
 @import 'layout/header';
 @import 'layout/sidebar';
+@import 'layout/footer';
 
 // Components
 @import 'components/navigation';

@@ -16982,6 +16982,17 @@ readers do not read off random characters that represent icons */
   width: auto;
 }
 
+html,
+body {
+  height: 100%;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
 .inventory {
   height: auto;
   padding: 10px;
@@ -17075,5 +17086,9 @@ readers do not read off random characters that represent icons */
   margin-bottom: 0;
   padding: 0;
   list-style: none;
+}
+
+.footer {
+  margin-top: auto;
 }
 
