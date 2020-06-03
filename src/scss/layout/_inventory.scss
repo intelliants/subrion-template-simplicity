@@ -1,6 +1,68 @@
 .inventory {
-  display: flex;
-  align-items: center;
-  //height: $inventory-height;
+  height: $inventory-height;
+  padding: $inventory-py;
+  color: $inventory-color;
+  font-size: $inventory-font-size;
   background-color: $inventory-bg;
+
+  a:not(.dropdown-item) {
+    color: $inventory-link-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $inventory-link-color-hover;
+    }
+
+    &:focus {
+      color: $inventory-link-color-focus;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+  &__block {
+    margin-left: $spacer*2;
+
+    &--navbar {
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    &--search-form {
+      width: auto;
+    }
+
+    &--social-links {
+      display: flex;
+      margin-bottom: 0;
+      padding: 0;
+      list-style: none;
+      font-size: $inventory-font-size*1.4;
+
+      > li {
+        margin-left: $spacer;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &--lang-selector {
+      margin-bottom: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &--currency-selector {
+      margin-bottom: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
 }

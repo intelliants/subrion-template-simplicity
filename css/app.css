@@ -10932,7 +10932,7 @@ a.text-dark:focus {
   font-weight: 400;
   font-display: block;
   src: url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?c1868c9545d2de1cf8488f1dadd8c9d0);
-  src: url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?c1868c9545d2de1cf8488f1dadd8c9d0?#iefix) format("embedded-opentype"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?a06da7f0950f9dd366fc9db9d56d618a) format("woff2"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff?ec3cfddedb8bebd2d7a3fdf511f7c1cc) format("woff"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf?13685372945d816a2b474fc082fd9aaa) format("truetype"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg?0cb5a5c0d251c109458c85c6afeffbaa#fontawesome) format("svg");
+  src: url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?c1868c9545d2de1cf8488f1dadd8c9d0) format("embedded-opentype"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?a06da7f0950f9dd366fc9db9d56d618a) format("woff2"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff?ec3cfddedb8bebd2d7a3fdf511f7c1cc) format("woff"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf?13685372945d816a2b474fc082fd9aaa) format("truetype"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg?0cb5a5c0d251c109458c85c6afeffbaa) format("svg");
 }
 
 .fab {
@@ -10951,7 +10951,7 @@ a.text-dark:focus {
   font-weight: 400;
   font-display: block;
   src: url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?261d666b0147c6c5cda07265f98b8f8c);
-  src: url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?261d666b0147c6c5cda07265f98b8f8c?#iefix) format("embedded-opentype"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2?c20b5b7362d8d7bb7eddf94344ace33e) format("woff2"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff?f89ea91ecd1ca2db7e09baa2c4b156d1) format("woff"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf?db78b9359171f24936b16d84f63af378) format("truetype"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg?89ffa3aba80d30ee0a9371b25c968bbb#fontawesome) format("svg");
+  src: url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?261d666b0147c6c5cda07265f98b8f8c) format("embedded-opentype"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2?c20b5b7362d8d7bb7eddf94344ace33e) format("woff2"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff?f89ea91ecd1ca2db7e09baa2c4b156d1) format("woff"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf?db78b9359171f24936b16d84f63af378) format("truetype"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg?89ffa3aba80d30ee0a9371b25c968bbb) format("svg");
 }
 
 .far {
@@ -10970,7 +10970,7 @@ a.text-dark:focus {
   font-weight: 900;
   font-display: block;
   src: url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?a0369ea57eb6d3843d6474c035111f29);
-  src: url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?a0369ea57eb6d3843d6474c035111f29?#iefix) format("embedded-opentype"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?b15db15f746f29ffa02638cb455b8ec0) format("woff2"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff?bea989e82b07e9687c26fc58a4805021) format("woff"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf?1ab236ed440ee51810c56bd16628aef0) format("truetype"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg?ec763292e583294612f124c0b0def500#fontawesome) format("svg");
+  src: url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?a0369ea57eb6d3843d6474c035111f29) format("embedded-opentype"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?b15db15f746f29ffa02638cb455b8ec0) format("woff2"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff?bea989e82b07e9687c26fc58a4805021) format("woff"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf?1ab236ed440ee51810c56bd16628aef0) format("truetype"), url(/templates/simplicity/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg?ec763292e583294612f124c0b0def500) format("svg");
 }
 
 .fa,
@@ -16983,8 +16983,71 @@ readers do not read off random characters that represent icons */
 }
 
 .inventory {
+  height: auto;
+  padding: 10px;
+  color: #eee;
+  font-size: 0.75rem;
+  background-color: #333;
+}
+
+.inventory a:not(.dropdown-item) {
+  color: #eee;
+  text-decoration: none;
+}
+
+.inventory a:not(.dropdown-item):hover {
+  color: #fff;
+}
+
+.inventory a:not(.dropdown-item):focus {
+  color: #fff;
+}
+
+.inventory__container {
   display: flex;
   align-items: center;
-  background-color: #333;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.inventory__block {
+  margin-left: 2rem;
+}
+
+.inventory__block--navbar {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.inventory__block--search-form {
+  width: auto;
+}
+
+.inventory__block--social-links {
+  display: flex;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.05rem;
+}
+
+.inventory__block--social-links > li {
+  margin-left: 1rem;
+}
+
+.inventory__block--social-links > li:first-child {
+  margin-left: 0;
+}
+
+.inventory__block--lang-selector {
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.inventory__block--currency-selector {
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
 }
 

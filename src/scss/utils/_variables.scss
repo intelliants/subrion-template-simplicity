@@ -1,8 +1,9 @@
-$fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
 
-$inventory-height: 40px;
-$inventory-color: #eee;
-$inventory-link-color: #f7f7f7;
+$inventory-height:           auto;
+$inventory-py:               10px;
+$inventory-font-size:        rem(12);
+$inventory-color:            #eee;
+$inventory-link-color:       #eee;
 $inventory-link-color-hover: #fff;
 $inventory-link-color-focus: #fff;
-$inventory-bg: #333;
+$inventory-bg:               #333;
