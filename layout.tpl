@@ -99,9 +99,13 @@
                             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                         </li>
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <form action="{$smarty.const.IA_URL}search/" class="form-inline">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="{lang key='search' readonly=true}">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-success"><span class="fa fa-search"></span></button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
