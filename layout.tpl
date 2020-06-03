@@ -82,6 +82,7 @@
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        {*{ia_blocks block='mainmenu'}*}
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
                                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -118,17 +119,19 @@
                 </div>
             </nav>
 
-            <header class="jumbotron">
-                <div class="container">
-                    <h1 class="display-4">Hello, world!</h1>
-                    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                    <hr class="my-4">
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                    <p class="lead">
-                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-                    </p>
-                </div>
-            </header>
+            {if $core.config.enable_landing && 'index' == $core.page.name}
+                <header class="jumbotron">
+                    <div class="container">
+                        <h1 class="display-4">Hello, world!</h1>
+                        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                        <hr class="my-4">
+                        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                        <p class="lead">
+                            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                        </p>
+                    </div>
+                </header>
+            {/if}
 
             <main class="py-5">
                 <div class="container">
