@@ -18061,6 +18061,44 @@ module.exports = g;
 
 /***/ }),
 
+/***/ "./src/js/_navbar.js":
+/*!***************************!*\
+  !*** ./src/js/_navbar.js ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+if ($('.main-menu--sticky').length) {
+  var stickyToggle = function stickyToggle(sticky, stickyWrapper, scrollElement) {
+    var stickyHeight = sticky.outerHeight();
+    var stickyTop = stickyWrapper.offset().top;
+
+    if (scrollElement.scrollTop() >= stickyTop) {
+      stickyWrapper.height(stickyHeight);
+      sticky.addClass('is-sticky');
+    } else {
+      sticky.removeClass('is-sticky');
+      stickyWrapper.height('auto');
+    }
+  }; // Find all data-toggle="sticky-onscroll" elements
+
+
+  $('.main-menu--sticky').each(function () {
+    var sticky = $(this);
+    var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
+
+    sticky.before(stickyWrapper); // Scroll & resize events
+
+    $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function () {
+      stickyToggle(sticky, stickyWrapper, $(this));
+    }); // On page load
+
+    stickyToggle(sticky, stickyWrapper, $(window));
+  });
+}
+
+/***/ }),
+
 /***/ "./src/js/app.js":
 /*!***********************!*\
   !*** ./src/js/app.js ***!
@@ -18082,6 +18120,8 @@ try {
 
   __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
 } catch (e) {}
+
+__webpack_require__(/*! ./_navbar */ "./src/js/_navbar.js");
 
 /***/ }),
 

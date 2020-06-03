@@ -17092,3 +17092,30 @@ body {
   margin-top: auto;
 }
 
+.main-menu {
+  background-color: #fff;
+}
+
+.main-menu.main-menu--sticky {
+  transition: all 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-menu.main-menu--sticky {
+    transition: none;
+  }
+}
+
+.main-menu.main-menu--sticky.is-sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.main-menu.main-menu--sticky .navbar-collapse {
+  max-height: 320px;
+}
+

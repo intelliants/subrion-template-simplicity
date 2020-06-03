@@ -1,0 +1,21 @@
+.main-menu {
+  background-color: $main-menu-bg;
+
+  &.main-menu--sticky {
+    @include transition(all .15s ease-in-out);
+
+    &.is-sticky {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      @include box-shadow(0 1px 6px rgba(0,0,0,.18));
+    }
+
+    .navbar-collapse {
+      max-height: 320px;
+    }
+  }
+}

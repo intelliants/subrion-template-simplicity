@@ -82,6 +82,12 @@
             order="3204"
             values="1,0"
             description="Sticky navbar">1</config>
+    <config group="template_simplicity"
+            name="search_navbar"
+            type="radio"
+            order="3205"
+            values="1,0"
+            description="Show search in navbar">1</config>
 
     <config group="template_simplicity"
             type="divider"

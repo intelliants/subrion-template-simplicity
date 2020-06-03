@@ -7,3 +7,5 @@ try {
 
   require('bootstrap');
 } catch (e) {}
+
+require('./_navbar');
