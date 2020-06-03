@@ -45,12 +45,14 @@
                         {include 'currency-selector.tpl'}
                     </ul>
                 {/if}
-                <form action="{$smarty.const.IA_URL}search/" class="inventory__block inventory__block--search-form input-group">
-                    <input type="text" name="q" class="form-control form-control-sm" placeholder="{lang key='search' readonly=true}">
-                    <div class="input-group-append">
-                        <button type="submit" class="btn btn-primary btn-sm"><span class="fa fa-search"></span></button>
-                    </div>
-                </form>
+                {if $core.config.search_inventory}
+                    <form action="{$smarty.const.IA_URL}search/" class="inventory__block inventory__block--search-form input-group">
+                        <input type="text" name="q" class="form-control form-control-sm" placeholder="{lang key='search' readonly=true}">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-primary btn-sm"><span class="fa fa-search"></span></button>
+                        </div>
+                    </form>
+                {/if}
                 {if $core.config.website_social}
                     <ul class="inventory__block inventory__block--social-links">
                         {if $core.config.website_social_t}<li><a href="{$core.config.website_social_t}" class="twitter"><span class="fab fa-twitter"></span></a></li>{/if}

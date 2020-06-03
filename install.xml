@@ -48,6 +48,16 @@
 
     <config group="template_simplicity"
             type="divider"
+            order="3100">Inventory bar</config>
+    <config group="template_simplicity"
+            name="search_inventory"
+            type="radio"
+            order="3101"
+            values="1,0"
+            description="Show search in inventory">0</config>
+
+    <config group="template_simplicity"
+            type="divider"
             order="3200">Navbar / Mainmenu</config>
     <config group="template_simplicity"
             name="max_top_menu_items"
