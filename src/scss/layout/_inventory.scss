@@ -29,8 +29,10 @@
     margin-left: $spacer*2;
 
     &--navbar {
-      margin-left: 0;
-      margin-right: auto;
+      display: flex;
+      margin: 0 auto 0 0;
+      padding: 0;
+      list-style: none;
 
       @include media-breakpoint-down(sm) {
         display: none;
