@@ -77,13 +77,13 @@
                             {/if}
                         {/if}
                     </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        {*{ia_blocks block='mainmenu'}*}
-                        <ul class="navbar-nav mr-auto">
+                    <div class="collapse navbar-collapse" id="navbarMain">
+                        {ia_blocks block='mainmenu'}
+                        {*<ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
                                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                             </li>
@@ -104,7 +104,7 @@
                             <li class="nav-item">
                                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                             </li>
-                        </ul>
+                        </ul>*}
                         {if $core.config.search_navbar}
                             <form action="{$smarty.const.IA_URL}search/" class="form-inline">
                                 <div class="input-group">
