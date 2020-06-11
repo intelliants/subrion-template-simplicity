@@ -64,7 +64,7 @@
                     {/if}
                 </div>
             </section>
-            <nav class="main-menu navbar navbar-expand-lg{if $core.config.navbar_sticky} main-menu--sticky{/if}">
+            <nav class="main-menu navbar navbar-expand-lg navbar-light{if $core.config.navbar_sticky} main-menu--sticky{/if}">
                 <div class="container">
                     <a class="navbar-brand" href="{$smarty.const.IA_URL}">
                         {if $core.config.enable_text_logo}
@@ -83,28 +83,6 @@
 
                     <div class="collapse navbar-collapse" id="navbarMain">
                         {ia_blocks block='mainmenu'}
-{*<ul class="navbar-nav mr-auto">
-    <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-    </li>
-</ul>*}
                         {if $core.config.search_navbar}
                             <form action="{$smarty.const.IA_URL}search/" class="form-inline">
                                 <div class="input-group">
