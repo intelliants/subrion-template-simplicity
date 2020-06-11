@@ -146,48 +146,10 @@
             <footer class="footer bg-dark text-white py-5">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-3">
-                            <nav class="mb-4">
-                                <div class="mb-3">Footer menu #1</div>
-                                <ul class="list-unstyled">
-                                    <li><a href="">Link #1</a></li>
-                                    <li><a href="">Link #2</a></li>
-                                    <li><a href="">Link #3</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="col-md-3">
-                            <nav class="mb-4">
-                                <div class="mb-3">Footer menu #2</div>
-                                <ul class="list-unstyled">
-                                    <li><a href="">Link #1</a></li>
-                                    <li><a href="">Link #2</a></li>
-                                    <li><a href="">Link #3</a></li>
-                                    <li><a href="">Link #4</a></li>
-                                    <li><a href="">Link #5</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="col-md-3">
-                            <nav class="mb-4">
-                                <div class="mb-3">Footer menu #3</div>
-                                <ul class="list-unstyled">
-                                    <li><a href="">Link #1</a></li>
-                                    <li><a href="">Link #2</a></li>
-                                    <li><a href="">Link #3</a></li>
-                                    <li><a href="">Link #4</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="col-md-3">
-                            <nav class="mb-4">
-                                <div class="mb-3">Footer menu #4</div>
-                                <ul class="list-unstyled">
-                                    <li><a href="">Link #1</a></li>
-                                    <li><a href="">Link #2</a></li>
-                                </ul>
-                            </nav>
-                        </div>
+                        <div class="{width section='footer-blocks' position='footer1' tag='col-md-'}">{ia_blocks block='footer1'}</div>
+                        <div class="{width section='footer-blocks' position='footer2' tag='col-md-'}">{ia_blocks block='footer2'}</div>
+                        <div class="{width section='footer-blocks' position='footer3' tag='col-md-'}">{ia_blocks block='footer3'}</div>
+                        <div class="{width section='footer-blocks' position='footer4' tag='col-md-'}">{ia_blocks block='footer4'}</div>
                     </div>
                 </div>
             </footer>
