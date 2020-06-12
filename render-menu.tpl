@@ -10,16 +10,10 @@
 {if in_array($position, ['inventory', 'mainmenu'])}
     {ia_menu menus=$menu.contents class="{$classes} {$menu.classname}"}
 {else}
-    {if $menu.header || isset($manageMode)}
-        <div class="nav-menu-header {$menu.classname}">{$menu.title|escape}</div>
-    {else}
-        <div class="menu {$menu.classname}">
-    {/if}
-
-    {ia_menu menus=$menu.contents class="{$classes} {$menu.classname}"}
-
-    {if $menu.header || isset($manageMode)}
-    {else}
-        </div>
-    {/if}
+    <div class="menu {$menu.classname}">
+        {if 'copyright' !== $position && $menu.header || isset($manageMode)}
+            <div class="menu__header {$menu.classname}">{$menu.title|escape}</div>
+        {/if}
+        {ia_menu menus=$menu.contents class="menu__content {$classes} {$menu.classname}"}
+    </div>
 {/if}

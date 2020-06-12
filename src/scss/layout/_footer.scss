@@ -3,7 +3,127 @@
 }
 
 .footer {
+  color: $footer-color;
+  font-size: $footer-font-size;
+  line-height: $footer-height;
   background-color: $footer-bg;
+
+  @include media-breakpoint-down(md) {
+    line-height: 1;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  a:not(.dropdown-item) {
+    color: $footer-link-color;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+
+    &:hover {
+      color: $footer-link-color-hover;
+    }
+
+    &:focus {
+      color: $footer-link-color-active;
+    }
+  }
+
+  &__container {
+    display: flex;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+
+      > * {
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    margin-left: auto;
+    margin-bottom: 0;
+
+    @include media-breakpoint-down(md) {
+      margin-left: 0;
+    }
+  }
+
+  &__social-links {
+    display: flex;
+    padding: 0;
+    list-style: none;
+
+    @include media-breakpoint-up(lg) {
+      margin: 0;
+    }
+
+    @include media-breakpoint-down(md) {
+      display: block;
+      @include clearfix;
+    }
+
+    > li {
+
+      @include media-breakpoint-down(md) {
+        float: left;
+        margin-right: rem(10);
+        margin-bottom: $spacer;
+      }
+
+      > a {
+        display: block;
+        padding: 0 $spacer;
+        font-size: rem(16);
+
+        @include media-breakpoint-down(md) {
+          padding: rem(10);
+          border-radius: rem(4);
+          background-color: darken($footer-bg, 5%);
+        }
+      }
+    }
+  }
+
+  .menu {
+
+    &__content {
+      display: flex;
+      flex-direction: row;
+
+      @include media-breakpoint-down(md) {
+        display: block;
+        @include clearfix;
+      }
+
+      > li {
+
+        @include media-breakpoint-down(md) {
+          float: left;
+          margin-right: rem(10);
+          margin-bottom: $spacer;
+        }
+
+        > a {
+          padding: 0 rem(10);
+          text-decoration: none;
+
+          @include media-breakpoint-down(md) {
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
 .back-to-top {

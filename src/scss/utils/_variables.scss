@@ -1,19 +1,20 @@
+$dark: #343a40;
 
 $main-menu-bg: #fff;
 
-$inventory-height:           auto;
-$inventory-py:               10px;
-$inventory-font-size:        rem(12);
-$inventory-color:            #eee;
-$inventory-link-color:       #eee;
-$inventory-link-color-hover: #fff;
-$inventory-link-color-focus: #fff;
-$inventory-bg:               #333;
+$inventory-height:            auto;
+$inventory-py:                10px;
+$inventory-font-size:         rem(12);
+$inventory-color:             #eee;
+$inventory-link-color:        #eee;
+$inventory-link-color-hover:  #fff;
+$inventory-link-color-active: #fff;
+$inventory-bg:                $dark;
 
-$footer-height:           auto;
-$footer-font-size:        rem(12);
-$footer-color:            #eee;
-$footer-link-color:       #eee;
-$footer-link-color-hover: #fff;
-$footer-link-color-focus: #fff;
-$footer-bg:               #323232;
+$footer-height:            60px;
+$footer-font-size:         rem(12);
+$footer-color:             #eee;
+$footer-link-color:        #eee;
+$footer-link-color-hover:  #fff;
+$footer-link-color-active: #fff;
+$footer-bg:                $dark;

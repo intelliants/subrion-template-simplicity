@@ -157,11 +157,11 @@
             {/if}
 
             <footer class="footer">
-                <div class="container">
+                <div class="footer__container container">
                     {ia_hooker name='smartyFrontBeforeFooterLinks'}
 
                     {if $core.config.website_social}
-                        <ul class="nav-footer nav-footer-social">
+                        <ul class="footer__social-links">
                             {if $core.config.website_social_t}<li><a href="{$core.config.website_social_t}" class="twitter"><span class="fab fa-twitter"></span></a></li>{/if}
                             {if $core.config.website_social_f}<li><a href="{$core.config.website_social_f}" class="facebook"><span class="fab fa-facebook"></span></a></li>{/if}
                             {if $core.config.website_social_g}<li><a href="{$core.config.website_social_g}" class="google-plus"><span class="fab fa-google-plus"></span></a></li>{/if}
@@ -171,7 +171,7 @@
 
                     {ia_blocks block='copyright'}
 
-                    <p class="copyright">&copy; {$smarty.server.REQUEST_TIME|date_format:'%Y'} {lang key='powered_by_subrion'}</p>
+                    <p class="footer__copyright">&copy; {$smarty.server.REQUEST_TIME|date_format:'%Y'} {lang key='powered_by_subrion'}</p>
 
                     {ia_hooker name='smartyFrontAfterFooterLinks'}
                 </div>
