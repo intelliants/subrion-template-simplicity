@@ -9,5 +9,5 @@ try {
 }
 catch (e) {}
 
-require('./_navbar');
+require('./_main-menu');
 require('./_back-to-top');

@@ -17092,6 +17092,7 @@ body {
 }
 
 .main-menu {
+  border-bottom: 1px solid #dee2e6;
   background-color: #fff;
 }
 
@@ -17128,6 +17129,51 @@ body {
 
 .main-menu.main-menu--sticky .navbar-collapse {
   max-height: 320px;
+}
+
+.main-menu {
+  border-bottom: 1px solid #dee2e6;
+  background-color: #fff;
+}
+
+@media (max-width: 767.98px) {
+  .main-menu {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.main-menu > .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.main-menu.main-menu--sticky {
+  transition: all 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-menu.main-menu--sticky {
+    transition: none;
+  }
+}
+
+.main-menu.main-menu--sticky.is-sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.main-menu.main-menu--sticky .navbar-collapse {
+  max-height: 320px;
+}
+
+.teaser {
+  background: url(/img/teaser-bg.jpg) 50% 50% no-repeat;
+  background-size: cover;
 }
 
 .footer-blocks,

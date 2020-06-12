@@ -1,4 +1,5 @@
 .main-menu {
+  border-bottom: 1px solid $border-color;
   background-color: $main-menu-bg;
 
   @include media-breakpoint-down(sm) {
