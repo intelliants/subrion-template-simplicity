@@ -1,0 +1,6 @@
+
+@mixin heading($font-size: 18, $letter-spacing: 1) {
+  font-size: rem($font-size);
+  text-transform: uppercase;
+  letter-spacing: rem($letter-spacing);
+}

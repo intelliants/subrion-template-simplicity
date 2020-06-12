@@ -3,8 +3,7 @@
 
   &__caption {
     margin-bottom: $gap;
-    font-size: rem(18);
-    text-transform: uppercase;
+    @include heading();
   }
 }
 
