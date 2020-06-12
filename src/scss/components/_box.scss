@@ -1,0 +1,13 @@
+.box,
+.menu {
+
+  &__caption {
+    margin-bottom: $gap;
+    font-size: rem(18);
+    text-transform: uppercase;
+  }
+}
+
+.box {
+
+}

@@ -12,7 +12,7 @@
 {else}
     <div class="menu {$menu.classname}">
         {if 'copyright' !== $position && $menu.header || isset($manageMode)}
-            <div class="menu__header {$menu.classname}">{$menu.title|escape}</div>
+            <div class="menu__caption {$menu.classname}">{$menu.title|escape}</div>
         {/if}
         {ia_menu menus=$menu.contents class="menu__content {$classes} {$menu.classname}"}
     </div>

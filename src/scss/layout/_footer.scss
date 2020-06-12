@@ -1,18 +1,7 @@
-.footer-blocks {
-  background-color: lighten($footer-bg, 5%);
-}
-
+.footer-blocks,
 .footer {
   color: $footer-color;
   font-size: $footer-font-size;
-  line-height: $footer-height;
-  background-color: $footer-bg;
-
-  @include media-breakpoint-down(md) {
-    line-height: 1;
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
 
   a:not(.dropdown-item) {
     color: $footer-link-color;
@@ -31,6 +20,65 @@
       color: $footer-link-color-active;
     }
   }
+}
+
+.footer-blocks {
+  margin-top: auto;
+  padding: 70px 0;
+  background-color: lighten($footer-bg, 3%);
+
+  > .container > .row {
+
+    > [class*="col-md"] {
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: $gap*2.5;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .box,
+  .menu {
+
+    &__caption {
+      color: rgba(#fff, 8);
+    }
+  }
+
+  .menu {
+
+    &__content {
+
+      > li {
+        margin-bottom: $gap;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        > a {
+          display: inline;
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  line-height: $footer-height;
+  background-color: $footer-bg;
+
+  @include media-breakpoint-down(md) {
+    line-height: 1;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 
   &__container {
     display: flex;
@@ -39,7 +87,7 @@
       flex-direction: column;
 
       > * {
-        margin-bottom: 15px;
+        margin-bottom: $gap;
 
         &:last-child {
           margin-bottom: 0;
@@ -76,12 +124,12 @@
       @include media-breakpoint-down(md) {
         float: left;
         margin-right: rem(10);
-        margin-bottom: $spacer;
+        margin-bottom: $gap;
       }
 
       > a {
         display: block;
-        padding: 0 $spacer;
+        padding: 0 $gap;
         font-size: rem(16);
 
         @include media-breakpoint-down(md) {
@@ -109,7 +157,7 @@
         @include media-breakpoint-down(md) {
           float: left;
           margin-right: rem(10);
-          margin-bottom: $spacer;
+          margin-bottom: $gap;
         }
 
         > a {

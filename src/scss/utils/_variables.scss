@@ -1,3 +1,5 @@
+$gap: 15px;
+
 $dark: #343a40;
 
 $main-menu-bg: #fff;
@@ -12,9 +14,9 @@ $inventory-link-color-active: #fff;
 $inventory-bg:                $dark;
 
 $footer-height:            60px;
-$footer-font-size:         rem(12);
-$footer-color:             #eee;
-$footer-link-color:        #eee;
-$footer-link-color-hover:  #fff;
-$footer-link-color-active: #fff;
+$footer-font-size:         rem(14);
+$footer-color:             rgba(#fff, .5);
+$footer-link-color:        rgba(#fff, .6);
+$footer-link-color-hover:  rgba(#fff, .7);
+$footer-link-color-active: rgba(#fff, .7);
 $footer-bg:                $dark;
