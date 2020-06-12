@@ -80,22 +80,6 @@
     padding-bottom: 40px;
   }
 
-  &__container {
-    display: flex;
-
-    @include media-breakpoint-down(md) {
-      flex-direction: column;
-
-      > * {
-        margin-bottom: $gap;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-
   &__copyright {
     margin-left: auto;
     margin-bottom: 0;
@@ -136,6 +120,22 @@
           padding: rem(10);
           border-radius: rem(4);
           background-color: darken($footer-bg, 5%);
+        }
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+
+      > * {
+        margin-bottom: $gap;
+
+        &:last-child {
+          margin-bottom: 0;
         }
       }
     }

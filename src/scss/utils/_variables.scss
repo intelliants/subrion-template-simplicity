@@ -1,20 +1,20 @@
 $gap: 15px;
 
+$blue: #0098ac;
 $dark: #343a40;
 
 $main-menu-bg: #fff;
 
-$inventory-height:            auto;
-$inventory-py:                10px;
-$inventory-font-size:         rem(12);
-$inventory-color:             #eee;
-$inventory-link-color:        #eee;
-$inventory-link-color-hover:  #fff;
-$inventory-link-color-active: #fff;
-$inventory-bg:                $dark;
+$inventory-height:            50px;
+$inventory-font-size:         rem(13);
+$inventory-color:             #000;
+$inventory-link-color:        rgba($inventory-color, .7);
+$inventory-link-color-hover:  rgba($inventory-color, .8);
+$inventory-link-color-active: rgba($inventory-color, .8);
+$inventory-bg:                #fff;
 
 $footer-height:            60px;
-$footer-font-size:         rem(14);
+$footer-font-size:         rem(13);
 $footer-color:             rgba(#fff, .5);
 $footer-link-color:        rgba(#fff, .6);
 $footer-link-color-hover:  rgba(#fff, .7);

@@ -34,33 +34,25 @@
     <body class="page-{$core.page.name}">
         <div id="app">
             <section class="inventory">
-                <div class="inventory__container container">
-                    {ia_blocks block='inventory'}
-                    {if $core.config.language_switch && count($core.languages) > 1}
-                        <div class="inventory__block inventory__block--lang-selector">
-                            {include 'language-selector.tpl'}
-                        </div>
+                <div class="container">
+                    {if $core.config.website_social}
+                        <ul class="inventory__block inventory__block--social-links">
+                            {if $core.config.website_social_t}<li><a href="{$core.config.website_social_t}" class="twitter"><span class="fab fa-twitter"></span></a></li>{/if}
+                            {if $core.config.website_social_f}<li><a href="{$core.config.website_social_f}" class="facebook"><span class="fab fa-facebook-f"></span></a></li>{/if}
+                            {if $core.config.website_social_g}<li><a href="{$core.config.website_social_g}" class="google-plus"><span class="fab fa-google-plus-g"></span></a></li>{/if}
+                            {if $core.config.website_social_i}<li><a href="{$core.config.website_social_i}" class="linkedin"><span class="fab fa-linkedin-in"></span></a></li>{/if}
+                        </ul>
                     {/if}
+                    {ia_blocks block='inventory'}
                     {if $core.config.currency_switch && count($core.currencies) > 1}
                         <div id="js-currencies-list" class="inventory__block inventory__block--currency-selector">
                             {include 'currency-selector.tpl'}
                         </div>
                     {/if}
-                    {if $core.config.search_inventory}
-                        <form action="{$smarty.const.IA_URL}search/" class="inventory__block inventory__block--search-form input-group">
-                            <input type="text" name="q" class="form-control form-control-sm" placeholder="{lang key='search' readonly=true}">
-                            <div class="input-group-append">
-                                <button type="submit" class="btn btn-primary btn-sm"><span class="fa fa-search"></span></button>
-                            </div>
-                        </form>
-                    {/if}
-                    {if $core.config.website_social}
-                        <ul class="inventory__block inventory__block--social-links">
-                            {if $core.config.website_social_t}<li><a href="{$core.config.website_social_t}" class="twitter"><span class="fab fa-twitter"></span></a></li>{/if}
-                            {if $core.config.website_social_f}<li><a href="{$core.config.website_social_f}" class="facebook"><span class="fab fa-facebook"></span></a></li>{/if}
-                            {if $core.config.website_social_g}<li><a href="{$core.config.website_social_g}" class="google-plus"><span class="fab fa-google-plus"></span></a></li>{/if}
-                            {if $core.config.website_social_i}<li><a href="{$core.config.website_social_i}" class="linkedin"><span class="fab fa-linkedin"></span></a></li>{/if}
-                        </ul>
+                    {if $core.config.language_switch && count($core.languages) > 1}
+                        <div class="inventory__block inventory__block--lang-selector">
+                            {include 'language-selector.tpl'}
+                        </div>
                     {/if}
                 </div>
             </section>
@@ -157,15 +149,15 @@
             {/if}
 
             <footer class="footer">
-                <div class="footer__container container">
+                <div class="container">
                     {ia_hooker name='smartyFrontBeforeFooterLinks'}
 
                     {if $core.config.website_social}
                         <ul class="footer__social-links">
                             {if $core.config.website_social_t}<li><a href="{$core.config.website_social_t}" class="twitter"><span class="fab fa-twitter"></span></a></li>{/if}
-                            {if $core.config.website_social_f}<li><a href="{$core.config.website_social_f}" class="facebook"><span class="fab fa-facebook"></span></a></li>{/if}
-                            {if $core.config.website_social_g}<li><a href="{$core.config.website_social_g}" class="google-plus"><span class="fab fa-google-plus"></span></a></li>{/if}
-                            {if $core.config.website_social_i}<li><a href="{$core.config.website_social_i}" class="linkedin"><span class="fab fa-linkedin"></span></a></li>{/if}
+                            {if $core.config.website_social_f}<li><a href="{$core.config.website_social_f}" class="facebook"><span class="fab fa-facebook-f"></span></a></li>{/if}
+                            {if $core.config.website_social_g}<li><a href="{$core.config.website_social_g}" class="google-plus"><span class="fab fa-google-plus-g"></span></a></li>{/if}
+                            {if $core.config.website_social_i}<li><a href="{$core.config.website_social_i}" class="linkedin"><span class="fab fa-linkedin-in"></span></a></li>{/if}
                         </ul>
                     {/if}
 
