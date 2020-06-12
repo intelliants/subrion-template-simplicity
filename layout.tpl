@@ -94,7 +94,7 @@
                     <div class="container">
                         <h1 class="display-4">Simplicity</h1>
                         <p class="lead">Bootstrap 4 developer template</p>
-                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                        <a class="btn btn-primary btn-lg" href="https://getbootstrap.com/docs/4.5/components/" role="button" target="_blank">Learn more</a>
                     </div>
                 </header>
             {/if}

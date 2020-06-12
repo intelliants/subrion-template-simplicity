@@ -17172,7 +17172,11 @@ body {
 }
 
 .teaser {
-  background: url(/img/teaser-bg.jpg) 50% 50% no-repeat;
+  padding-top: 350px;
+  padding-bottom: 150px;
+  text-align: center;
+  color: #fff;
+  background: #272725 url(/templates/simplicity/../img/teaser-bg.jpg?55a39ab2dae936bd3c24852d9e2011d0) 50% 50% no-repeat;
   background-size: cover;
 }
 
