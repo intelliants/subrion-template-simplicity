@@ -6,6 +6,8 @@ try {
   window.$ = window.jQuery = jQuery;
 
   require('bootstrap');
-} catch (e) {}
+}
+catch (e) {}
 
 require('./_navbar');
+require('./_back-to-top');

@@ -15,7 +15,7 @@ if ($('.main-menu--sticky').length) {
   // Find all data-toggle="sticky-onscroll" elements
   $('.main-menu--sticky').each(function() {
     var sticky = $(this);
-    var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
+    var stickyWrapper = $('<div>').addClass('sticky-wrapper');
     sticky.before(stickyWrapper);
 
     // Scroll & resize events

@@ -143,31 +143,61 @@
                 </div>
             </main>
 
-            <footer class="footer bg-dark text-white py-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="{width section='footer-blocks' position='footer1' tag='col-md-'}">{ia_blocks block='footer1'}</div>
-                        <div class="{width section='footer-blocks' position='footer2' tag='col-md-'}">{ia_blocks block='footer2'}</div>
-                        <div class="{width section='footer-blocks' position='footer3' tag='col-md-'}">{ia_blocks block='footer3'}</div>
-                        <div class="{width section='footer-blocks' position='footer4' tag='col-md-'}">{ia_blocks block='footer4'}</div>
+            {if isset($iaBlocks.footer1) || isset($iaBlocks.footer2) || isset($iaBlocks.footer3) || isset($iaBlocks.footer4)}
+                <footer class="footer-blocks">
+                    <div class="container">
+                        <div class="row">
+                            <div class="{width section='footer-blocks' position='footer1' tag='col-md-'}">{ia_blocks block='footer1'}</div>
+                            <div class="{width section='footer-blocks' position='footer2' tag='col-md-'}">{ia_blocks block='footer2'}</div>
+                            <div class="{width section='footer-blocks' position='footer3' tag='col-md-'}">{ia_blocks block='footer3'}</div>
+                            <div class="{width section='footer-blocks' position='footer4' tag='col-md-'}">{ia_blocks block='footer4'}</div>
+                        </div>
                     </div>
+                </footer>
+            {/if}
+
+            <footer class="footer">
+                <div class="container">
+                    {ia_hooker name='smartyFrontBeforeFooterLinks'}
+
+                    {if $core.config.website_social}
+                        <ul class="nav-footer nav-footer-social">
+                            {if $core.config.website_social_t}<li><a href="{$core.config.website_social_t}" class="twitter"><span class="fab fa-twitter"></span></a></li>{/if}
+                            {if $core.config.website_social_f}<li><a href="{$core.config.website_social_f}" class="facebook"><span class="fab fa-facebook"></span></a></li>{/if}
+                            {if $core.config.website_social_g}<li><a href="{$core.config.website_social_g}" class="google-plus"><span class="fab fa-google-plus"></span></a></li>{/if}
+                            {if $core.config.website_social_i}<li><a href="{$core.config.website_social_i}" class="linkedin"><span class="fab fa-linkedin"></span></a></li>{/if}
+                        </ul>
+                    {/if}
+
+                    {ia_blocks block='copyright'}
+
+                    <p class="copyright">&copy; {$smarty.server.REQUEST_TIME|date_format:'%Y'} {lang key='powered_by_subrion'}</p>
+
+                    {ia_hooker name='smartyFrontAfterFooterLinks'}
                 </div>
             </footer>
+
+            <button class="back-to-top js-back-to-top"><span class="fa fa-angle-double-up"></span></button>
         </div>
 
         <!-- SYSTEM STUFF -->
+
         {if $core.config.cron}
             <div style="display: none;">
                 <img src="{$core.page.nonProtocolUrl}cron/?{randnum}" width="1" height="1" alt="">
             </div>
         {/if}
+
         {if isset($manageMode)}
             {include 'visual-mode.tpl'}
         {/if}
+
         {if isset($previewMode)}
             <p>{lang key='youre_in_preview_mode'}</p>
         {/if}
+
         {ia_print_js display='on'}
+
         {ia_hooker name='smartyFrontFinalize'}
     </body>
 </html>

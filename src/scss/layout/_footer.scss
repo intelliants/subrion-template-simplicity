@@ -1,3 +1,45 @@
+.footer-blocks {
+  background-color: lighten($footer-bg, 5%);
+}
+
 .footer {
-  margin-top: auto;
+  background-color: $footer-bg;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 40px;
+  border: 0 none;
+  background: darken($dark, 3%);
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  outline: 0 none;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  @include transition(all .15s ease-in-out);
+
+  &:focus {
+    outline: 0 none;
+  }
+
+  &:hover {
+    background: darken($dark, 1%);
+    margin-bottom: 3px;
+  }
+
+  &.on {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @include media-breakpoint-down(sm) {
+    bottom: 10px;
+    right: 10px;
+  }
 }
